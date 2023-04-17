@@ -4,7 +4,7 @@ const btnReset = document.querySelector("#btnReset");
 const screen1 = document.querySelector(".screen1");
 const screen2 = document.querySelector(".screen2");
 
-const randomNumber = Math.round(Math.random() * 10);
+let randomNumber = Math.round(Math.random() * 10);
 let xAttempts = 1;
 
 // Eventos
@@ -31,6 +31,7 @@ function handleTryClick(event) {
 function handleResetClick() {
   toggleScreen()
   xAttempts = 1;
+  randomNumber = Math.round(Math.random() * 10);
 }
 
 function toggleScreen () {
